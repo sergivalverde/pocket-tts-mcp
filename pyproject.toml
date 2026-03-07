@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pocket-tts-mcp"
+version = "0.1.0"
+description = "MCP server for local text-to-speech using Pocket TTS"
+requires-python = ">=3.11"
+dependencies = [
+    "mcp[cli]>=1.0.0",
+    "pocket-tts>=0.1.0",
+    "numpy",
+    "scipy",
+]
+
+[project.scripts]
+pocket-tts-mcp = "pocket_tts_mcp.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pocket_tts_mcp"]
+artifacts = ["src/pocket_tts_mcp/voices/**/*.wav"]
