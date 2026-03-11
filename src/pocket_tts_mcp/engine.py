@@ -58,6 +58,9 @@ VOICE_STYLES = {
     "ex04-laughing": "expresso-ex04/laughing.wav",
     "ex04-narration": "expresso-ex04/narration.wav",
     "ex04-sarcastic": "expresso-ex04/sarcastic.wav",
+    # Podcast - cloned voices for two-speaker conversations
+    "podcast-s1": "podcast/s1.wav",
+    "podcast-s2": "podcast/s2.wav",
     # Expresso ex01 - delivery styles
     "default": "expresso-ex01/default.wav",
     "enunciated": "expresso-ex01/enunciated.wav",

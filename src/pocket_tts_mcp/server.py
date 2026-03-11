@@ -115,13 +115,16 @@ def list_styles() -> str:
     """
     styles = engine.get_available_styles()
     groups = {
+        "podcast (cloned voices)": {},
         "alba-mackenna (delivery)": {},
         "expresso-ex03 (emotions)": {},
         "expresso-ex04 (emotions)": {},
         "expresso-ex01 (delivery)": {},
     }
     for name, available in styles.items():
-        if name in ("casual", "announcer", "merchant", "a-moment-by"):
+        if name.startswith("podcast-"):
+            groups["podcast (cloned voices)"][name] = available
+        elif name in ("casual", "announcer", "merchant", "a-moment-by"):
             groups["alba-mackenna (delivery)"][name] = available
         elif name.startswith("ex04-"):
             groups["expresso-ex04 (emotions)"][name] = available
