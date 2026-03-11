@@ -91,7 +91,7 @@ def generate_conversation(
 
 @mcp.tool()
 def list_voices() -> str:
-    """List all available built-in voices and their descriptions."""
+    """List all available voices: built-in and cloned."""
     voices = {
         "alba": "Female, clear narrator (default S1)",
         "azelma": "Female (default S2)",
@@ -101,6 +101,7 @@ def list_voices() -> str:
         "fantine": "Female",
         "cosette": "Female",
         "eponine": "Female",
+        "sergi": "Male, cloned voice (use as voice_ref: /Users/tensor/Documents/SV/.claude/tts-voices/sergi.wav)",
     }
     return json.dumps(voices, indent=2)
 
